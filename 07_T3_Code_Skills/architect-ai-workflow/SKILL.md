@@ -65,6 +65,9 @@ If any of these are missing, ask before designing:
 - **Never** default to the most expensive model for routing or classification.
 - **Never** allow unguarded writes to money, external communications, or destructive deletes.
 - **Never** skip the "riskiest step" and blast-radius analysis.
+- **Never** pick Orchestrator–Workers for sequential reasoning; multi-agent helps breadth-first, parallelizable work and can hurt sequential work. Budget ~15x chat tokens when you do use it.
+- **Prefer the advisor pattern** over a frontier model end to end: a cheap executor that consults a strong advisor when stuck often gets most of the quality at a fraction of the cost.
+- **Treat harness + model as one system**; harness changes alone can move scores as much as swapping models. See [HARNESS_PRINCIPLES.md](../../HARNESS_PRINCIPLES.md).
 
 ## Output Format
 Produce a concise **Architecture Spec** with:

@@ -32,6 +32,19 @@ Each skill is self-contained in its own folder with a progressive-disclosure `SK
 
 ---
 
+## Harness Principles
+
+[`HARNESS_PRINCIPLES.md`](HARNESS_PRINCIPLES.md) collects 6 rules for building agent harnesses, with the evidence behind them from Anthropic, OpenAI, Google/DeepMind, Microsoft, Meta and university research:
+
+1. Treat harness + model as one system; report both when comparing.
+2. Externalize memory: progress files, feature lists, traces.
+3. Use a separate evaluator/verifier; self-grading is unreliable.
+4. Go multi-agent only for parallelizable work, and budget ~15x tokens.
+5. Route by capability: a strong model plans or advises, cheaper models execute.
+6. Keep tool surfaces small and model-friendly.
+
+---
+
 ## Installation
 
 ### Per-project (recommended)

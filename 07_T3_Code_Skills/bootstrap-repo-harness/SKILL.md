@@ -51,3 +51,5 @@ Inspect the repository first (do not ask for what you can read from `package.jso
 - **Never** dump a 300-line manual into `CLAUDE.md`; every line eats context on every turn.
 - **Never** allow reading `.env` or `secrets/**` or running `rm -rf` / `git push` in default allow rules.
 - **Never** overwrite existing `CLAUDE.md` or `settings.json` without showing or preserving existing rules.
+- **Externalize memory** for long-running work: point `CLAUDE.md` at a progress file / feature list and git history so each new session can pick up where the last stopped. See [HARNESS_PRINCIPLES.md](../../HARNESS_PRINCIPLES.md).
+- **Keep the tool surface small**; a few model-friendly tools beat many overlapping ones.

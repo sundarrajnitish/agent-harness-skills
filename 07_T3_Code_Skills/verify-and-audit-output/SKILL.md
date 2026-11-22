@@ -46,6 +46,7 @@ Review the diff like a skeptical senior code reviewer, not a relieved author:
 - **Never** silently delete or overwrite uncertain data during an audit—flag it.
 - **Never** flatter a weak design; surface the strongest counter-argument plainly.
 - **Never** present unverified prices, model IDs, API limits, or legal/medical/financial advice as authoritative—flag them for official verification.
+- **Never** let the agent that produced an output be its only grader; agents over-praise their own work. Use a separate verifier, calibrated with few-shot examples where possible. See [HARNESS_PRINCIPLES.md](../../HARNESS_PRINCIPLES.md).
 
 ## Output Format
 Deliver a scannable **Verification Report** designed for a 30-second human scan:
