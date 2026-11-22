@@ -1,17 +1,18 @@
 # T3 Code Skills Library
 
-A curated library of **12 drop-in skills** for **T3 Code**, **Claude Code**, and **Antigravity**:
-- **8 AI engineering & harness skills** (repo setup, skill authoring, MCP security, workflow architecture, production hardening, prompt craft, evals, and verification)
+A curated library of **13 drop-in skills** for **T3 Code**, **Claude Code**, and **Antigravity**:
+- **9 foundations & AI harness skills** (Harness/Loop/Graph principles, repo setup, skill authoring, MCP security, workflow architecture, production hardening, prompt craft, evals, and verification)
 - **4 Karpathy-style agentic engineering skills** (coding guidelines, LLM wiki, autoresearch loop, and context engineering)
 
-Each skill is self-contained in its own folder with a `SKILL.md` (plus `scripts/` or `references/` where useful).
+See [../PRINCIPLES.md](../PRINCIPLES.md) for the foundational **Harness → Loop → Graph** principles that tie these skills together.
 
 ---
 
-## Part 1 — AI Engineering & Harness Skills (8)
+## Part 1 — Foundations & AI Harness Skills (9)
 
 | Label | Skill | What It Does |
 |---|---|---|
+| **`[FOUNDATIONS]`** | [`agent-system-principles`](agent-system-principles/SKILL.md) | Applies the 7-level Harness → Loop → Graph ladder to diagnose agent failures, design check-first loops, gate by cost-of-undo, and route lessons to the owning layer. |
 | **`[SETUP]`** | [`bootstrap-repo-harness`](bootstrap-repo-harness/SKILL.md) | Scaffolds `CLAUDE.md`/`AGENTS.md`, least-privilege `settings.json`, `PreToolUse`/`PostToolUse` hooks, and starter commands for a repo. |
 | **`[SETUP]`** | [`author-agent-skill`](author-agent-skill/SKILL.md) | Designs, writes, and trigger-tests a new `SKILL.md` package with progressive disclosure and zero trigger collisions. |
 | **`[SETUP]`** | [`design-mcp-integration`](design-mcp-integration/SKILL.md) | Plans least-privilege MCP server configs or custom MCP tool specs with a confused-deputy threat model. |
