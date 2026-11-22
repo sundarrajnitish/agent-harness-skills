@@ -1,0 +1,26 @@
+# Copyrighted source extracts & local personal study notes (never commit or upload)
+00_Source_Extract/
+01_Complete_Book_Summary.md
+02_Harness_Decision_Map.md
+03_Harness_Playbooks/
+04_Templates/
+05_Industry_Use_Case_Playbooks.md
+05_Reference/
+06_Practice_Missions_Checklist.md
+LOCAL_STUDY_NOTES_README.md
+
+# Local agent & OS metadata
+.claude/
+.DS_Store
+Thumbs.db
+
+# Secrets & environment files
+.env
+.env.*
+secrets/
+
+# Python / editor artifacts
+__pycache__/
+*.pyc
+.vscode/
+.idea/
