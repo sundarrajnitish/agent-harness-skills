@@ -1,8 +1,8 @@
 # agent-harness-skills
 
-A curated, drop-in library of **13 reusable AI agent skills** and foundational engineering principles for **T3 Code**, **Claude Code**, and **Antigravity**.
+A curated, drop-in library of **15 reusable AI agent skills** and foundational engineering principles for **T3 Code**, **Claude Code**, and **Antigravity**.
 
-Every skill is prefixed by **when you use it** (`/setup-*`, `/plan-*`, `/code-*`, `/check-*`, `/wiki-*`) with a front-loaded `Use when…` description so typing `/` in your chat composer immediately shows the right skill for the moment.
+Every skill is prefixed by **when you use it** (`/setup-*`, `/plan-*`, `/design-*`, `/code-*`, `/check-*`, `/wiki-*`) with a front-loaded `Use when…` description so typing `/` in your chat composer immediately shows the right skill for the moment.
 
 ---
 
@@ -30,6 +30,12 @@ Read **[PRINCIPLES.md](PRINCIPLES.md)** for the foundational **Harness → Loop 
 | [`/plan-ai-workflow`](07_T3_Code_Skills/plan-ai-workflow/SKILL.md) | Before coding an AI feature — applies the Complexity Ladder (single call vs. chain vs. router vs. agent), per-step model routing, and blast-radius gates. |
 | [`/plan-context-pack`](07_T3_Code_Skills/plan-context-pack/SKILL.md) | Packing agent context (`LLM = CPU, context = RAM`), writing declarative success-criteria briefs, isolating noisy subagents, or fixing context rot. |
 | [`/plan-system-prompt`](07_T3_Code_Skills/plan-system-prompt/SKILL.md) | Writing, refactoring, or meta-prompt-debugging a system/user prompt with the 5-ingredient check, few-shot examples, strict JSON schemas, and injection guards. |
+
+### `/design-*` — Google Stitch UI Design & Design-to-Code
+| Slash Command | When to Use It |
+|---|---|
+| [`/design-stitch-system`](07_T3_Code_Skills/design-stitch-system/SKILL.md) | Working with Google Stitch UI design — sets up Stitch MCP, extracts/maintains `.stitch/DESIGN.md`, enhances rough UI prompts, and generates/iterates screens. |
+| [`/design-stitch-to-code`](07_T3_Code_Skills/design-stitch-to-code/SKILL.md) | Converting Google Stitch screens or exports into clean, typed, modular frontend components aligned to your repo's tokens and conventions. |
 
 ### `/code-*` — Write, Harden & Optimize Code
 | Slash Command | When to Use It |
