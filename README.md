@@ -2,7 +2,7 @@
 
 A curated, drop-in library of **13 reusable AI agent skills** and foundational engineering principles for **T3 Code**, **Claude Code**, and **Antigravity**.
 
-Each skill is self-contained in its own folder with a progressive-disclosure `SKILL.md` (plus optional `scripts/` and `references/`) so agents load only the short trigger description until a task actually calls for it.
+Every skill is prefixed by **when you use it** (`/setup-*`, `/plan-*`, `/code-*`, `/check-*`, `/wiki-*`) with a front-loaded `Use when…` description so typing `/` in your chat composer immediately shows the right skill for the moment.
 
 ---
 
@@ -15,38 +15,46 @@ Read **[PRINCIPLES.md](PRINCIPLES.md)** for the foundational **Harness → Loop 
 
 ---
 
-## Included Skills
+## Slash-Command Skill Catalog
 
-### Part 1 — Foundations & AI Harness Skills (9)
+### `/setup-*` — Configure Repos, MCP & Skills
+| Slash Command | When to Use It |
+|---|---|
+| [`/setup-repo-harness`](07_T3_Code_Skills/setup-repo-harness/SKILL.md) | Starting or configuring a repo — scaffolds `CLAUDE.md`/`AGENTS.md`, least-privilege `settings.json`, and `PreToolUse`/`PostToolUse` safety hooks. |
+| [`/setup-mcp-safely`](07_T3_Code_Skills/setup-mcp-safely/SKILL.md) | Connecting or designing an MCP server — enforces read-only defaults, env-var secrets, tool restraint, and a confused-deputy threat model. |
+| [`/setup-new-skill`](07_T3_Code_Skills/setup-new-skill/SKILL.md) | Creating, refactoring, or trigger-testing a reusable `SKILL.md` package without trigger collisions. |
 
-| Label | Skill | Purpose |
-|---|---|---|
-| **`[FOUNDATIONS]`** | [`agent-system-principles`](07_T3_Code_Skills/agent-system-principles/SKILL.md) | Applies the 7-level Harness → Loop → Graph ladder to diagnose agent failures, design check-first loops, gate by cost-of-undo, and route lessons to the owning layer. |
-| **`[SETUP]`** | [`bootstrap-repo-harness`](07_T3_Code_Skills/bootstrap-repo-harness/SKILL.md) | Scaffolds `CLAUDE.md`/`AGENTS.md`, least-privilege `.claude/settings.json`, `PreToolUse` DB-safety hook, and `PostToolUse` format/typecheck hooks. |
-| **`[SETUP]`** | [`author-agent-skill`](07_T3_Code_Skills/author-agent-skill/SKILL.md) | Designs, writes, and trigger-tests new `SKILL.md` packages with progressive disclosure and zero trigger collisions. |
-| **`[SETUP]`** | [`design-mcp-integration`](07_T3_Code_Skills/design-mcp-integration/SKILL.md) | Plans least-privilege MCP server configs or custom MCP tool specs with a confused-deputy threat model. |
-| **`[ARCHITECTURE]`** | [`architect-ai-workflow`](07_T3_Code_Skills/architect-ai-workflow/SKILL.md) | Applies the Complexity Ladder ("earn the agent") and 6 automation patterns to spec an AI workflow, model routing, and blast-radius gates before coding. |
-| **`[PRODUCTION]`** | [`harden-llm-pipeline`](07_T3_Code_Skills/harden-llm-pipeline/SKILL.md) | Audits or implements production LLM/API code: centralized model config, retries with backoff, strict schema validation, idempotency, HITL queues, caching/Batch API, and missing-output alerts. |
-| **`[PROMPTING]`** | [`craft-system-prompt`](07_T3_Code_Skills/craft-system-prompt/SKILL.md) | Writes, refactors, or meta-prompt-debugs prompts using the 5-ingredient check, standing-order test, few-shot examples, structured schemas, and injection guards. |
-| **`[EVALS]`** | [`build-llm-eval-suite`](07_T3_Code_Skills/build-llm-eval-suite/SKILL.md) | Creates a 10–20 row real-world eval dataset, pre-run scoring rubric, and lightweight runner to tune prompts or compare models. |
-| **`[VERIFICATION]`** | [`verify-and-audit-output`](07_T3_Code_Skills/verify-and-audit-output/SKILL.md) | Runs Claim Ledger sourcing (`UNSOURCED` flags), number reconciliation, skeptical PR/diff review, and devil's-advocate critique with confidence bounds. |
+### `/plan-*` — Design Workflows, Context & Prompts Before Coding
+| Slash Command | When to Use It |
+|---|---|
+| [`/plan-ai-workflow`](07_T3_Code_Skills/plan-ai-workflow/SKILL.md) | Before coding an AI feature — applies the Complexity Ladder (single call vs. chain vs. router vs. agent), per-step model routing, and blast-radius gates. |
+| [`/plan-context-pack`](07_T3_Code_Skills/plan-context-pack/SKILL.md) | Packing agent context (`LLM = CPU, context = RAM`), writing declarative success-criteria briefs, isolating noisy subagents, or fixing context rot. |
+| [`/plan-system-prompt`](07_T3_Code_Skills/plan-system-prompt/SKILL.md) | Writing, refactoring, or meta-prompt-debugging a system/user prompt with the 5-ingredient check, few-shot examples, strict JSON schemas, and injection guards. |
 
-### Part 2 — Karpathy-Style Agentic Engineering Skills (4)
+### `/code-*` — Write, Harden & Optimize Code
+| Slash Command | When to Use It |
+|---|---|
+| [`/code-karpathy-rules`](07_T3_Code_Skills/code-karpathy-rules/SKILL.md) | Writing, fixing, or refactoring code — enforces Karpathy's 4 rules: Think Before Coding, Simplicity First, Surgical Changes, and Goal-Driven test loops. |
+| [`/code-harden-llm`](07_T3_Code_Skills/code-harden-llm/SKILL.md) | Productionizing or auditing LLM/API code — adds centralized model config, retries with backoff, schema validation, idempotency, HITL queues, caching, and alerts. |
+| [`/code-autoresearch-loop`](07_T3_Code_Skills/code-autoresearch-loop/SKILL.md) | Running autonomous optimization experiments (ML, latency, evals, bundle size) — sets up immutable judge, mutable target, `program.md`, `results.tsv`, and Git ratchet. |
 
-| Label | Skill | Purpose |
-|---|---|---|
-| **`[CODING]`** | [`karpathy-coding-guidelines`](07_T3_Code_Skills/karpathy-coding-guidelines/SKILL.md) | Enforces 4 behavioral coding-agent guardrails: Think Before Coding, Simplicity First, Surgical Changes, and Goal-Driven Execution. |
-| **`[KNOWLEDGE]`** | [`karpathy-llm-wiki`](07_T3_Code_Skills/karpathy-llm-wiki/SKILL.md) | Builds and operates a persistent, interlinked local Markdown wiki (`raw/`, `wiki/`, `index.md`, `log.md`) via `init`, `ingest`, `query`, and `lint`. |
-| **`[OPTIMIZATION]`** | [`karpathy-autoresearch-loop`](07_T3_Code_Skills/karpathy-autoresearch-loop/SKILL.md) | Runs bounded autonomous optimization loops using the Contract of Three (immutable judge, mutable target, `program.md`), `results.tsv`, and a monotonic Git keep/discard ratchet. |
-| **`[CONTEXT]`** | [`karpathy-context-engineering`](07_T3_Code_Skills/karpathy-context-engineering/SKILL.md) | Treats the context window as finite RAM: packs high-signal context, rewrites imperative prompts into declarative success-criteria briefs, isolates subagents, and prevents context rot and AI slop. |
+### `/check-*` — Verify, Evaluate & Diagnose
+| Slash Command | When to Use It |
+|---|---|
+| [`/check-verify-audit`](07_T3_Code_Skills/check-verify-audit/SKILL.md) | Before shipping high-stakes code, diffs, docs, or decisions — runs Claim Ledger sourcing (`UNSOURCED` flags), number reconciliation, skeptical PR review, and devil's advocate. |
+| [`/check-llm-evals`](07_T3_Code_Skills/check-llm-evals/SKILL.md) | Testing a prompt systematically or comparing/downgrading models — builds a 10–20 row real-world eval dataset, pre-run rubric, and benchmark runner. |
+| [`/check-agent-ladder`](07_T3_Code_Skills/check-agent-ladder/SKILL.md) | Diagnosing failing or looping agent setups — applies the 7-level Harness → Loop → Graph ladder, check-first design, undo-cost gates, and layer-targeted fixes. |
+
+### `/wiki-*` — Compile Persistent Knowledge
+| Slash Command | When to Use It |
+|---|---|
+| [`/wiki-llm-knowledge`](07_T3_Code_Skills/wiki-llm-knowledge/SKILL.md) | Building or updating a persistent local Markdown wiki (`raw/`, `wiki/`, `index.md`, `log.md`) via `init`, `ingest`, `query`, or `lint` instead of RAG. |
 
 ---
 
 ## Installation
 
 ### Per-project (recommended)
-Copy the skills into your project's `.agents/skills/` (T3 Code / Antigravity) or `.claude/skills/` (Claude Code):
-
 ```bash
 mkdir -p /path/to/your-project/.agents/skills
 cp -R 07_T3_Code_Skills/*/ /path/to/your-project/.agents/skills/

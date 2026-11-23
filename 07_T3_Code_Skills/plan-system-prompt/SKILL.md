@@ -1,11 +1,7 @@
 ---
-name: craft-system-prompt
+name: plan-system-prompt
 description: >-
-  Writes, refactors, or debugs prompts and system prompts using the 5-ingredient
-  checklist, standing-order test, system/user split, few-shot examples, structured
-  output schemas, and prompt-injection guards. Use whenever the user asks to write
-  a system prompt, improve a failing prompt, fix a bad LLM output via meta-prompting,
-  add structured JSON extraction, or tighten prompt instructions in a codebase.
+  Use when writing, refactoring, or debugging a system/user prompt — applies the 5-ingredient check, few-shot examples, strict JSON schemas, and prompt-injection guards.
 ---
 
 # Craft System Prompt `[PROMPTING]`

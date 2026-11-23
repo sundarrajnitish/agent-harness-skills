@@ -1,11 +1,7 @@
 ---
-name: build-llm-eval-suite
+name: check-llm-evals
 description: >-
-  Creates a 10–20 row real-world LLM evaluation dataset, pre-run scoring rubric,
-  and lightweight benchmark runner to tune prompts, compare models (15-minute
-  personal eval), or validate downgrading to a cheaper model. Use whenever the user
-  asks to build an eval set, test a prompt systematically, compare models (Haiku vs.
-  Sonnet vs. Opus or cross-provider), or set up regression tests for an AI feature.
+  Use when testing a prompt systematically or comparing/downgrading models — builds a 10-20 row real-world eval dataset, pre-run rubric, and benchmark runner.
 ---
 
 # Build LLM Eval Suite `[EVALS]`

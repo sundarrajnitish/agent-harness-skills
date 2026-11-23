@@ -1,12 +1,7 @@
 ---
-name: karpathy-autoresearch-loop
+name: code-autoresearch-loop
 description: >-
-  Scaffolds or executes an Andrej Karpathy-style autoresearch optimization loop
-  using the Contract of Three (immutable judge, mutable target, program.md strategy),
-  fixed time-boxed runs, results.tsv logging, and a monotonic Git keep/discard
-  ratchet. Use whenever the user wants to run autonomous optimization experiments,
-  set up an autoresearch loop (for ML training, performance tuning, latency, bundle
-  size, or eval scores), or write a program.md research harness.
+  Use when running autonomous optimization experiments (ML, latency, evals, bundle size) — sets up immutable judge, mutable target, program.md, results.tsv, and Git ratchet.
 ---
 
 # Karpathy Autoresearch Loop `[OPTIMIZATION]`

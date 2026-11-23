@@ -1,11 +1,7 @@
 ---
-name: bootstrap-repo-harness
+name: setup-repo-harness
 description: >-
-  Scaffolds a complete coding-agent harness (CLAUDE.md / AGENTS.md, least-privilege
-  settings.json, PreToolUse/PostToolUse hooks, and starter slash commands) tailored
-  to an existing repository. Use whenever the user asks to set up a repo for Claude Code
-  or T3 Code, initialize CLAUDE.md or AGENTS.md, add agent guardrails or hooks, or
-  configure permissions for a new or existing codebase.
+  Use when setting up a repo for T3 Code or Claude Code — scaffolds CLAUDE.md/AGENTS.md, least-privilege settings.json, and PreToolUse/PostToolUse safety hooks.
 ---
 
 # Bootstrap Repo Harness `[SETUP]`

@@ -1,11 +1,7 @@
 ---
-name: design-mcp-integration
+name: setup-mcp-safely
 description: >-
-  Plans and configures least-privilege MCP server connections or specs a custom MCP
-  server with a confused-deputy threat model, read-only defaults, and tool-restraint
-  rules. Use whenever the user asks to connect an MCP server, add Postgres/GitHub/
-  Slack/filesystem MCP access, audit MCP permissions, or design a custom MCP server
-  and its tool schemas.
+  Use when connecting or designing an MCP server — enforces least-privilege read-only defaults, env-var secrets, tool restraint, and a confused-deputy threat model.
 ---
 
 # Design MCP Integration `[SETUP]`

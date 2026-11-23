@@ -1,13 +1,7 @@
 ---
-name: karpathy-context-engineering
+name: plan-context-pack
 description: >-
-  Applies Andrej Karpathy's Context Engineering ("LLM = CPU, context window = RAM")
-  and Agentic Engineering workflow to design high-signal context packs, convert
-  imperative instructions into declarative success-criteria briefs, isolate noisy
-  exploration, and eliminate context rot or AI slop in multi-turn coding sessions.
-  Use whenever the user asks to engineer context for an agent, fix context rot or
-  agent drift, write a declarative task brief/spec for a coding agent, or structure
-  a repo and workflow for agentic engineering.
+  Use when packing agent context (LLM=CPU, context=RAM), writing declarative success-criteria briefs, isolating noisy subagents, or fixing context rot and AI slop.
 ---
 
 # Karpathy Context Engineering `[CONTEXT]`

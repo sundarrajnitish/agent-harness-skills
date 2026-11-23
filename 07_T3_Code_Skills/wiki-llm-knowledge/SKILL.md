@@ -1,12 +1,7 @@
 ---
-name: karpathy-llm-wiki
+name: wiki-llm-knowledge
 description: >-
-  Builds and maintains an Andrej Karpathy-style LLM Wiki—a persistent, interlinked
-  local Markdown knowledge base (raw/, wiki/, index.md, log.md) compiled once by
-  the agent instead of rediscovering facts via RAG. Use whenever the user asks to
-  set up an LLM wiki, compile docs/papers/notes into a markdown knowledge base,
-  ingest a source into a wiki, query a wiki, or lint a knowledge base for contradictions
-  and orphan pages.
+  Use when building or updating a persistent local Markdown knowledge base (raw/, wiki/, index.md, log.md) — runs init, ingest, query, or lint instead of RAG.
 ---
 
 # Karpathy LLM Wiki `[KNOWLEDGE]`

@@ -1,49 +1,32 @@
 # T3 Code Skills Library
 
-A curated library of **13 drop-in skills** for **T3 Code**, **Claude Code**, and **Antigravity**:
-- **9 foundations & AI harness skills** (Harness/Loop/Graph principles, repo setup, skill authoring, MCP security, workflow architecture, production hardening, prompt craft, evals, and verification)
-- **4 Karpathy-style agentic engineering skills** (coding guidelines, LLM wiki, autoresearch loop, and context engineering)
+**13 drop-in skills** named by workflow phase so typing `/` in T3 Code, Claude Code, or Antigravity immediately tells you which skill to pick.
 
-See [../PRINCIPLES.md](../PRINCIPLES.md) for the foundational **Harness → Loop → Graph** principles that tie these skills together.
+See [../PRINCIPLES.md](../PRINCIPLES.md) for the foundational **Harness → Loop → Graph** principles behind these skills.
 
 ---
 
-## Part 1 — Foundations & AI Harness Skills (9)
+## Quick `/` Picker
 
-| Label | Skill | What It Does |
+| Prefix | Slash Command | When to Use It |
 |---|---|---|
-| **`[FOUNDATIONS]`** | [`agent-system-principles`](agent-system-principles/SKILL.md) | Applies the 7-level Harness → Loop → Graph ladder to diagnose agent failures, design check-first loops, gate by cost-of-undo, and route lessons to the owning layer. |
-| **`[SETUP]`** | [`bootstrap-repo-harness`](bootstrap-repo-harness/SKILL.md) | Scaffolds `CLAUDE.md`/`AGENTS.md`, least-privilege `settings.json`, `PreToolUse`/`PostToolUse` hooks, and starter commands for a repo. |
-| **`[SETUP]`** | [`author-agent-skill`](author-agent-skill/SKILL.md) | Designs, writes, and trigger-tests a new `SKILL.md` package with progressive disclosure and zero trigger collisions. |
-| **`[SETUP]`** | [`design-mcp-integration`](design-mcp-integration/SKILL.md) | Plans least-privilege MCP server configs or custom MCP tool specs with a confused-deputy threat model. |
-| **`[ARCHITECTURE]`** | [`architect-ai-workflow`](architect-ai-workflow/SKILL.md) | Applies the Complexity Ladder ("earn the agent") and 6 automation patterns to spec an AI workflow before coding. |
-| **`[PRODUCTION]`** | [`harden-llm-pipeline`](harden-llm-pipeline/SKILL.md) | Audits or builds production LLM/API code: model routing, retries, schema validation, idempotency, HITL, caching, alerts. |
-| **`[PROMPTING]`** | [`craft-system-prompt`](craft-system-prompt/SKILL.md) | Writes, refactors, or debugs prompts using the 5-ingredient check, few-shot examples, structured schemas, and injection guards. |
-| **`[EVALS]`** | [`build-llm-eval-suite`](build-llm-eval-suite/SKILL.md) | Builds a 10–20 row real-world eval dataset, pre-run rubric, and scoring workflow to tune prompts or compare models. |
-| **`[VERIFICATION]`** | [`verify-and-audit-output`](verify-and-audit-output/SKILL.md) | Runs Claim Ledger sourcing, number reconciliation, blast-radius checks, and devil's-advocate review on high-stakes outputs. |
+| **`/setup`** | [`/setup-repo-harness`](setup-repo-harness/SKILL.md) | Setting up a repo: `CLAUDE.md`/`AGENTS.md`, `settings.json`, and safety hooks |
+| **`/setup`** | [`/setup-mcp-safely`](setup-mcp-safely/SKILL.md) | Connecting or designing a least-privilege MCP server + threat model |
+| **`/setup`** | [`/setup-new-skill`](setup-new-skill/SKILL.md) | Creating, refactoring, or trigger-testing a new `SKILL.md` |
+| **`/plan`** | [`/plan-ai-workflow`](plan-ai-workflow/SKILL.md) | Before coding an AI feature: single call vs. chain vs. router vs. agent |
+| **`/plan`** | [`/plan-context-pack`](plan-context-pack/SKILL.md) | Packing agent context (RAM), writing declarative briefs, fixing context rot |
+| **`/plan`** | [`/plan-system-prompt`](plan-system-prompt/SKILL.md) | Writing, refactoring, or debugging a system/user prompt & JSON schema |
+| **`/code`** | [`/code-karpathy-rules`](code-karpathy-rules/SKILL.md) | Coding with surgical diffs, simplicity, explicit assumptions & test loops |
+| **`/code`** | [`/code-harden-llm`](code-harden-llm/SKILL.md) | Productionizing LLM/API code (retries, validation, idempotency, HITL, cost) |
+| **`/code`** | [`/code-autoresearch-loop`](code-autoresearch-loop/SKILL.md) | Running a time-boxed Git-ratchet optimization loop on a measurable metric |
+| **`/check`** | [`/check-verify-audit`](check-verify-audit/SKILL.md) | Fact-checking claims, reconciling numbers, auditing PR diffs, devil's advocate |
+| **`/check`** | [`/check-llm-evals`](check-llm-evals/SKILL.md) | Building a 10–20 row eval set & rubric to tune prompts or compare models |
+| **`/check`** | [`/check-agent-ladder`](check-agent-ladder/SKILL.md) | Diagnosing failing agent loops on the 7-level Harness → Loop → Graph ladder |
+| **`/wiki`** | [`/wiki-llm-knowledge`](wiki-llm-knowledge/SKILL.md) | Init, ingest, query, or lint a persistent local Markdown LLM wiki |
 
 ---
 
-## Part 2 — Karpathy-Style Agentic Engineering Skills (4)
-
-| Label | Skill | What It Does |
-|---|---|---|
-| **`[CODING]`** | [`karpathy-coding-guidelines`](karpathy-coding-guidelines/SKILL.md) | Enforces 4 coding-agent guardrails: Think Before Coding, Simplicity First, Surgical Changes, and Goal-Driven Execution. |
-| **`[KNOWLEDGE]`** | [`karpathy-llm-wiki`](karpathy-llm-wiki/SKILL.md) | Builds and operates a persistent, interlinked local Markdown wiki (`raw/`, `wiki/`, `index.md`, `log.md`) via `init`, `ingest`, `query`, and `lint`. |
-| **`[OPTIMIZATION]`** | [`karpathy-autoresearch-loop`](karpathy-autoresearch-loop/SKILL.md) | Runs bounded autonomous optimization loops using the Contract of Three (immutable judge, mutable target, `program.md`), `results.tsv`, and a Git keep/discard ratchet. |
-| **`[CONTEXT]`** | [`karpathy-context-engineering`](karpathy-context-engineering/SKILL.md) | Treats context as finite RAM: packs high-signal context, converts imperative asks into declarative success-criteria briefs, isolates subagents, and prevents context rot/slop. |
-
----
-
-## How to Use in Any T3 Code Project
-
-### Option 1: Copy specific skills into a project
-```bash
-mkdir -p /path/to/your-project/.agents/skills
-cp -R 07_T3_Code_Skills/*/ /path/to/your-project/.agents/skills/
-```
-
-### Option 2: Install globally across all tools on this machine
+## Install Everywhere
 ```bash
 for dest in "$HOME/.gemini/config/skills" "$HOME/.claude/skills" "$HOME/.agents/skills"; do
   mkdir -p "$dest"

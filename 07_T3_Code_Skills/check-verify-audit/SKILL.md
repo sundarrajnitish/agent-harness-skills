@@ -1,12 +1,7 @@
 ---
-name: verify-and-audit-output
+name: check-verify-audit
 description: >-
-  Runs a rigorous verification, sourcing, and safety audit on AI-generated code,
-  diffs, research summaries, or high-stakes decisions using Claim Ledgers, exact
-  passage citations, number reconciliation, blast-radius checks, and devil's-advocate
-  critique. Use whenever the user asks to fact-check or verify an output, audit a
-  PR or AI-generated diff, stress-test a technical decision, or check for hallucinations
-  and unsourced claims before shipping.
+  Use before shipping high-stakes code, diffs, docs, or decisions — runs Claim Ledger sourcing (UNSOURCED flags), number reconciliation, skeptical PR review, and devil's advocate.
 ---
 
 # Verify and Audit Output `[VERIFICATION]`

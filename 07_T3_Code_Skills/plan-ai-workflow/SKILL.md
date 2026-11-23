@@ -1,11 +1,7 @@
 ---
-name: architect-ai-workflow
+name: plan-ai-workflow
 description: >-
-  Applies the Complexity Ladder ("earn the agent") and the 6 automation patterns
-  to design an AI feature, agent, or automation before writing code. Use whenever
-  the user wants to design an AI workflow, decide whether a task needs an agent vs.
-  a chain/router/single call, choose models per step, spec tools and human gates, or
-  assess blast radius before building an LLM system.
+  Use before coding an AI feature or automation — applies the Complexity Ladder (single call vs. chain vs. router vs. agent), per-step model routing, and blast-radius gates.
 ---
 
 # Architect AI Workflow `[ARCHITECTURE]`

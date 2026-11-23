@@ -1,11 +1,7 @@
 ---
-name: author-agent-skill
+name: setup-new-skill
 description: >-
-  Designs, writes, and trigger-tests a reusable agent Skill package (SKILL.md plus
-  optional scripts/ and references/) for T3 Code, Antigravity, or Claude Code. Use
-  whenever the user asks to create a new skill, turn a recurring workflow into a
-  skill, refactor an existing SKILL.md, fix a skill that fails to trigger, or audit
-  a skills folder for trigger collisions.
+  Use when creating, refactoring, or trigger-testing a reusable SKILL.md package for T3 Code, Antigravity, or Claude Code without trigger collisions.
 ---
 
 # Author Agent Skill `[SETUP]`

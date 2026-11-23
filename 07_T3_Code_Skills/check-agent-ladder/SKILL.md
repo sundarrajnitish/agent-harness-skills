@@ -1,13 +1,7 @@
 ---
-name: agent-system-principles
+name: check-agent-ladder
 description: >-
-  Applies the 7-level Harness, Loop, and Graph engineering principles to diagnose
-  failing agent setups, design check-first verification and converging feedback
-  loops, structure parallel isolated workflows, gate actions by cost-of-undo, and
-  turn recurring failures into structural layer fixes. Use whenever the user asks
-  to diagnose why an agent loop is failing or looping, design verification checks
-  and exit conditions, decide human approval gates by undo cost, or apply Harness/
-  Loop/Graph principles to a project.
+  Use when diagnosing failing or looping agent setups — applies the 7-level Harness -> Loop -> Graph ladder, check-first design, undo-cost gates, and layer-targeted fixes.
 ---
 
 # Agent System Principles `[FOUNDATIONS]`

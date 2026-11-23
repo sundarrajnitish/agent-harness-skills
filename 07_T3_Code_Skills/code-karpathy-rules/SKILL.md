@@ -1,11 +1,7 @@
 ---
-name: karpathy-coding-guidelines
+name: code-karpathy-rules
 description: >-
-  Enforces Andrej Karpathy's 4 behavioral coding-agent guidelines (Think Before
-  Coding, Simplicity First, Surgical Changes, Goal-Driven Execution) to eliminate
-  silent assumptions, over-engineering, drive-by refactors, and AI slop. Use whenever
-  the user asks to apply Karpathy coding rules, code with strict surgical changes,
-  avoid over-engineering, refactor carefully, or enforce goal-driven test loops.
+  Use when writing, fixing, or refactoring code — enforces Karpathy's 4 rules: Think Before Coding, Simplicity First, Surgical Changes, and Goal-Driven test loops.
 ---
 
 # Karpathy Coding Guidelines `[CODING]`

@@ -1,12 +1,7 @@
 ---
-name: harden-llm-pipeline
+name: code-harden-llm
 description: >-
-  Audits or implements production LLM and Anthropic/AI API code for reliability,
-  cost control, and safety: centralized model config, retries with backoff, strict
-  schema validation, prompt-injection delimiters, idempotency keys, human fallback
-  queues, prompt caching/Batch API, and missing-output alerts. Use whenever the user
-  asks to productionize an LLM script, harden an AI endpoint or agent, cut API costs,
-  or review AI pipeline code before shipping.
+  Use when productionizing or auditing LLM/API code — adds centralized model config, retries with backoff, schema validation, idempotency, HITL queues, caching, and alerts.
 ---
 
 # Harden LLM Pipeline `[PRODUCTION]`
